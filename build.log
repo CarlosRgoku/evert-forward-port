@@ -1,0 +1,521 @@
+  GEN     ./Makefile
+  Using .. as source for kernel
+  CALL    ../scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      kernel/sched/core.o
+  CC      kernel/time/time.o
+In file included from ../kernel/sched/core.c:26:
+../kernel/sched/walt.h: In function ‘walt_task_dump’:
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘pid_t’ {aka ‘int’} [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:377:14:
+  SCHED_PRINT(p->pid);
+              ~~~~~~                              
+../kernel/sched/walt.h:377:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(p->pid);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:379:14:
+  SCHED_PRINT(p->ravg.demand);
+              ~~~~~~~~~~~~~~                      
+../kernel/sched/walt.h:379:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(p->ravg.demand);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:380:14:
+  SCHED_PRINT(p->ravg.coloc_demand);
+              ~~~~~~~~~~~~~~~~~~~~                
+../kernel/sched/walt.h:380:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(p->ravg.coloc_demand);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:381:14:
+  SCHED_PRINT(sched_ravg_window);
+              ~~~~~~~~~~~~~~~~~                   
+../kernel/sched/walt.h:381:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(sched_ravg_window);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:382:14:
+  SCHED_PRINT(new_sched_ravg_window);
+              ~~~~~~~~~~~~~~~~~~~~~               
+../kernel/sched/walt.h:382:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(new_sched_ravg_window);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:398:14:
+  SCHED_PRINT(p->misfit);
+              ~~~~~~~~~                           
+../kernel/sched/walt.h:398:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(p->misfit);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:399:14:
+  SCHED_PRINT(p->unfilter);
+              ~~~~~~~~~~~                         
+../kernel/sched/walt.h:399:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(p->unfilter);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h: In function ‘walt_rq_dump’:
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:422:14:
+  SCHED_PRINT(rq->prev_window_size);
+              ~~~~~~~~~~~~~~~~~~~~                
+../kernel/sched/walt.h:422:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(rq->prev_window_size);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:443:14:
+  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+../kernel/sched/walt.h:443:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:444:14:
+  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+../kernel/sched/walt.h:444:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h: In function ‘walt_dump’:
+../kernel/sched/walt.h:453:46: error: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘u64’ {aka ‘long long unsigned int’} [-Werror=format=]
+  printk_deferred("Time last window changed=%lu\n",
+                                            ~~^
+                                            %llu
+    sched_ravg_window_change_time);
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:458:14:
+  SCHED_PRINT(max_possible_capacity);
+              ~~~~~~~~~~~~~~~~~~~~~               
+../kernel/sched/walt.h:458:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(max_possible_capacity);
+  ^~~~~~~~~~~
+../kernel/sched/walt.h:368:49: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Werror=format=]
+ #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+                                                 ^~~~~~~~~
+../kernel/sched/walt.h:459:14:
+  SCHED_PRINT(min_max_possible_capacity);
+              ~~~~~~~~~~~~~~~~~~~~~~~~~           
+../kernel/sched/walt.h:459:2: note: in expansion of macro ‘SCHED_PRINT’
+  SCHED_PRINT(min_max_possible_capacity);
+  ^~~~~~~~~~~
+  CC      kernel/time/timer.o
+In file included from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h: In function ‘trace_raw_output_sched_compute_energy’:
+../include/trace/events/sched.h:1296:12: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Werror=format=]
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  trace_seq_printf(s, print);     \
+                      ^~~~~
+../include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+         PARAMS(print));         \
+         ^~~~~~
+../include/trace/events/sched.h:1261:1: note: in expansion of macro ‘TRACE_EVENT’
+ TRACE_EVENT(sched_compute_energy,
+ ^~~~~~~~~~~
+../include/trace/events/sched.h:1296:2: note: in expansion of macro ‘TP_printk’
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+  ^~~~~~~~~
+In file included from ../include/trace/trace_events.h:394,
+                 from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h:1296:64: note: format string is defined here
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+                                                             ~~~^
+                                                             %lu
+In file included from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h:1296:12: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 9 has type ‘long unsigned int’ [-Werror=format=]
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  trace_seq_printf(s, print);     \
+                      ^~~~~
+../include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+         PARAMS(print));         \
+         ^~~~~~
+../include/trace/events/sched.h:1261:1: note: in expansion of macro ‘TRACE_EVENT’
+ TRACE_EVENT(sched_compute_energy,
+ ^~~~~~~~~~~
+../include/trace/events/sched.h:1296:2: note: in expansion of macro ‘TP_printk’
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+  ^~~~~~~~~
+In file included from ../include/trace/trace_events.h:394,
+                 from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h:1296:93: note: format string is defined here
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+                                                                                          ~~~^
+                                                                                          %lu
+In file included from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h:1296:12: error: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 11 has type ‘long unsigned int’ [-Werror=format=]
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  trace_seq_printf(s, print);     \
+                      ^~~~~
+../include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+         PARAMS(print));         \
+         ^~~~~~
+../include/trace/events/sched.h:1261:1: note: in expansion of macro ‘TRACE_EVENT’
+ TRACE_EVENT(sched_compute_energy,
+ ^~~~~~~~~~~
+../include/trace/events/sched.h:1296:2: note: in expansion of macro ‘TP_printk’
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+  ^~~~~~~~~
+In file included from ../include/trace/trace_events.h:394,
+                 from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/sched.h:1296:129: note: format string is defined here
+  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+                                                                                                                              ~~~^
+                                                                                                                              %lu
+In file included from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/walt.h: In function ‘trace_raw_output_sched_update_task_ravg’:
+../include/trace/events/walt.h:284:16: error: format ‘%u’ expects argument of type ‘unsigned int’, but argument 27 has type ‘u64’ {aka ‘long long unsigned int’} [-Werror=format=]
+      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  trace_seq_printf(s, print);     \
+                      ^~~~~
+../include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+         PARAMS(print));         \
+         ^~~~~~
+../include/trace/events/walt.h:204:1: note: in expansion of macro ‘TRACE_EVENT’
+ TRACE_EVENT(sched_update_task_ravg,
+ ^~~~~~~~~~~
+../include/trace/events/walt.h:284:6: note: in expansion of macro ‘TP_printk’
+      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+      ^~~~~~~~~
+In file included from ../include/trace/events/sched.h:1751,
+                 from ../include/trace/trace_events.h:394,
+                 from ../include/trace/define_trace.h:96,
+                 from ../include/trace/events/sched.h:1756,
+                 from ../kernel/sched/core.c:29:
+../include/trace/events/walt.h:284:273: note: format string is defined here
+      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+                                                                                                                                                                                                                                                                                ~^
+                                                                                                                                                                                                                                                                                %llu
+In file included from ../kernel/sched/core.c:26:
+At top level:
+../kernel/sched/walt.h:464:12: error: ‘in_sched_bug’ defined but not used [-Werror=unused-variable]
+ static int in_sched_bug;
+            ^~~~~~~~~~~~
+  CC      crypto/asymmetric_keys/asymmetric_type.o
+  CC      crypto/asymmetric_keys/restrict.o
+  CC      kernel/trace/trace_clock.o
+  CC      crypto/asymmetric_keys/signature.o
+  CC      kernel/trace/ring_buffer.o
+  CC      crypto/asymmetric_keys/public_key.o
+  CC      kernel/time/hrtimer.o
+  ASN.1   crypto/asymmetric_keys/x509.asn1.c
+  ASN.1   crypto/asymmetric_keys/x509_akid.asn1.c
+  CC      crypto/asymmetric_keys/x509_public_key.o
+  ASN.1   crypto/asymmetric_keys/pkcs7.asn1.c
+  CC      crypto/asymmetric_keys/pkcs7_trust.o
+  CC      kernel/time/timekeeping.o
+  CC      crypto/asymmetric_keys/pkcs7_verify.o
+  CC      crypto/asymmetric_keys/x509.asn1.o
+  CC      crypto/asymmetric_keys/x509_akid.asn1.o
+  CC      crypto/asymmetric_keys/x509_cert_parser.o
+  CC      kernel/trace/trace.o
+  CC      crypto/asymmetric_keys/pkcs7.asn1.o
+  CC      crypto/asymmetric_keys/pkcs7_parser.o
+  CC      kernel/time/ntp.o
+  AR      crypto/asymmetric_keys/built-in.a
+  CC      crypto/api.o
+  CC      kernel/time/clocksource.o
+cc1: all warnings being treated as errors
+make[3]: *** [../scripts/Makefile.build:338: kernel/sched/core.o] Error 1
+make[2]: *** [../scripts/Makefile.build:642: kernel/sched] Error 2
+make[2]: ** Esperando que outros processos terminem.
+  CC      kernel/time/jiffies.o
+  CC      kernel/trace/trace_output.o
+  CC      crypto/cipher.o
+  CC      kernel/time/timer_list.o
+  CC      kernel/time/timeconv.o
+  CC      crypto/compress.o
+  CC      kernel/time/timecounter.o
+  CC      kernel/time/alarmtimer.o
+  CC      crypto/crypto_wq.o
+  CC      block/partitions/check.o
+  CC      kernel/trace/trace_seq.o
+  CC      crypto/algapi.o
+  CC      block/partitions/msdos.o
+  CC      kernel/time/posix-timers.o
+  CC      kernel/trace/trace_stat.o
+  CC      block/partitions/efi.o
+  CC      kernel/trace/trace_printk.o
+  AR      block/partitions/built-in.a
+  CC      block/bio.o
+  CC      crypto/scatterwalk.o
+  CC      kernel/time/posix-cpu-timers.o
+  CC      kernel/trace/trace_sched_switch.o
+  CC      crypto/proc.o
+  CC      kernel/time/posix-clock.o
+  CC      kernel/trace/trace_nop.o
+  CC      crypto/aead.o
+  CC      kernel/trace/blktrace.o
+  CC      block/elevator.o
+  CC      kernel/time/itimer.o
+  CC      crypto/ablkcipher.o
+  CC      kernel/time/clockevents.o
+  CC      kernel/trace/trace_events.o
+  CC      block/blk-core.o
+  CC      kernel/time/tick-common.o
+  CC      crypto/blkcipher.o
+  CC      kernel/time/tick-broadcast.o
+  CC      crypto/skcipher.o
+  CC      kernel/trace/trace_export.o
+  CC      kernel/time/tick-broadcast-hrtimer.o
+  CC      kernel/trace/trace_event_perf.o
+  CC      kernel/time/sched_clock.o
+  CC      crypto/seqiv.o
+  CC      kernel/time/tick-oneshot.o
+  CC      kernel/time/tick-sched.o
+  CC      kernel/trace/trace_events_filter.o
+  CC      crypto/echainiv.o
+  CC      block/blk-tag.o
+  CC      crypto/ahash.o
+  CC      kernel/time/vsyscall.o
+  CC      block/blk-sysfs.o
+  AR      kernel/time/built-in.a
+  CC      block/blk-flush.o
+  CC      kernel/trace/trace_events_trigger.o
+  CC      crypto/shash.o
+  CC      crypto/akcipher.o
+  CC      block/blk-settings.o
+  CC      kernel/trace/bpf_trace.o
+  CC      crypto/kpp.o
+  ASN.1   crypto/rsapubkey.asn1.c
+  CC      kernel/trace/error_report-traces.o
+  CC      block/blk-ioc.o
+  ASN.1   crypto/rsaprivkey.asn1.c
+  CC      crypto/rsa.o
+  CC      drivers/amba/bus.o
+  CC      crypto/rsa_helper.o
+  CC      block/blk-map.o
+  CC      crypto/rsa-pkcs1pad.o
+  AR      drivers/amba/built-in.a
+  CC      drivers/android/binderfs.o
+  CC      kernel/trace/power-traces.o
+  CC      crypto/acompress.o
+  CC      block/blk-exec.o
+  CC      drivers/android/binder.o
+  CC      block/blk-merge.o
+  CC      crypto/scompress.o
+  CC      crypto/algboss.o
+  CC      kernel/trace/rpm-traces.o
+  CC      block/blk-softirq.o
+  CC      crypto/testmgr.o
+  CC      kernel/trace/trace_probe.o
+  CC      block/blk-timeout.o
+  CC      crypto/cmac.o
+  CC      block/blk-lib.o
+  CC      crypto/hmac.o
+  CC      kernel/trace/trace_uprobe.o
+  CC      crypto/xcbc.o
+  CC      block/blk-mq.o
+  CC      drivers/android/binder_alloc.o
+  CC      crypto/crypto_null.o
+  CC      kernel/trace/ipc_logging.o
+  CC      crypto/md5.o
+  CC      drivers/android/vendor_hooks.o
+  AR      kernel/trace/built-in.a
+make[1]: *** [/home/SonGoku/evert-forward-port/kernel/Makefile:1225: kernel] Error 2
+make[1]: ** Esperando que outros processos terminem.
+  CC      crypto/sha1_generic.o
+  AR      drivers/auxdisplay/built-in.a
+  CC      crypto/sha256_generic.o
+  AR      drivers/android/built-in.a
+  CC      drivers/base/firmware_loader/fallback_table.o
+  CC      crypto/sha512_generic.o
+  CC      block/blk-mq-tag.o
+  CC      drivers/base/firmware_loader/main.o
+  CC      drivers/base/firmware_loader/fallback.o
+  CC      crypto/gf128mul.o
+  CC      block/blk-stat.o
+  CC      crypto/ecb.o
+  AR      drivers/base/firmware_loader/built-in.a
+  CC      drivers/base/power/sysfs.o
+  CC      drivers/base/regmap/regmap.o
+  CC      crypto/cbc.o
+  CC      drivers/base/power/generic_ops.o
+  CC      block/blk-mq-sysfs.o
+  CC      drivers/base/power/common.o
+  CC      crypto/cts.o
+  CC      block/blk-mq-cpumap.o
+  CC      drivers/base/power/qos.o
+  CC      crypto/xts.o
+  CC      block/blk-mq-sched.o
+  CC      drivers/base/regmap/regcache.o
+  CC      crypto/ctr.o
+  CC      drivers/base/power/runtime.o
+  CC      crypto/gcm.o
+  CC      drivers/base/regmap/regcache-rbtree.o
+  CC      block/ioctl.o
+  CC      drivers/base/regmap/regcache-flat.o
+  CC      drivers/base/power/wakeirq.o
+  CC      drivers/base/regmap/regmap-i2c.o
+  CC      crypto/cryptd.o
+  CC      drivers/base/power/main.o
+  CC      block/genhd.o
+  CC      drivers/base/regmap/regmap-spi.o
+  CC      crypto/des_generic.o
+  CC      drivers/base/regmap/regmap-spmi.o
+  CC      drivers/base/regmap/regmap-mmio.o
+  CC      block/partition-generic.o
+  CC      crypto/twofish_generic.o
+  CC      drivers/base/power/wakeup.o
+  CC      drivers/base/regmap/regmap-irq.o
+  CC      crypto/twofish_common.o
+  CC      block/ioprio.o
+  AR      drivers/base/regmap/built-in.a
+  CC      drivers/block/zram/zcomp.o
+  CC      crypto/aes_generic.o
+  CC      drivers/base/power/wakeup_stats.o
+  CC      drivers/block/zram/zram_drv.o
+  CC      block/badblocks.o
+  CC      drivers/base/power/domain.o
+  CC      crypto/arc4.o
+  CC      block/blk-rq-qos.o
+  CC      drivers/block/zram/zram_dedup.o
+  CC      crypto/deflate.o
+  CC      block/scsi_ioctl.o
+  AR      drivers/block/zram/built-in.a
+  CC      drivers/block/brd.o
+  CC      drivers/base/power/domain_governor.o
+  CC      crypto/crc32c_generic.o
+  CC      drivers/base/power/clock_ops.o
+  CC      crypto/crc32_generic.o
+  CC      block/bsg.o
+  CC      drivers/block/loop.o
+  AR      drivers/base/power/built-in.a
+  AR      drivers/base/test/built-in.a
+  CC      drivers/base/component.o
+  CC      crypto/authenc.o
+  CC      drivers/base/core.o
+  CC      block/blk-cgroup.o
+  CC      crypto/authencesn.o
+  AR      drivers/block/built-in.a
+  CC      block/noop-iosched.o
+  CC      crypto/lzo.o
+  CC      drivers/bluetooth/bluetooth-power.o
+  CC      crypto/lz4.o
+  CC      block/cfq-iosched.o
+In file included from ../include/linux/printk.h:7,
+                 from ../include/linux/kernel.h:13,
+                 from ../include/linux/list.h:9,
+                 from ../include/linux/module.h:9,
+                 from ../drivers/bluetooth/bluetooth-power.c:13:
+../drivers/bluetooth/bluetooth-power.c: In function ‘set_pwr_srcs_status’:
+../include/linux/kern_levels.h:5:18: error: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘struct bt_power_vreg_data *’ [-Werror=format=]
+ #define KERN_SOH "\001"  /* ASCII Start Of Header */
+                  ^~~~~~
+../include/linux/kern_levels.h:11:18: note: in expansion of macro ‘KERN_SOH’
+ #define KERN_ERR KERN_SOH "3" /* error conditions */
+                  ^~~~~~~~
+../include/linux/printk.h:304:9: note: in expansion of macro ‘KERN_ERR’
+  printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
+         ^~~~~~~~
+../drivers/bluetooth/bluetooth-power.c:38:34: note: in expansion of macro ‘pr_err’
+ #define BT_PWR_ERR(fmt, arg...)  pr_err("%s: " fmt "\n", __func__, ## arg)
+                                  ^~~~~~
+../drivers/bluetooth/bluetooth-power.c:1092:4: note: in expansion of macro ‘BT_PWR_ERR’
+    BT_PWR_ERR("%s(%d) value(%d)", handle->name,
+    ^~~~~~~~~~
+../drivers/bluetooth/bluetooth-power.c:1092:20: note: format string is defined here
+    BT_PWR_ERR("%s(%d) value(%d)", handle->name,
+                   ~^
+  CC      crypto/rng.o
+  CC      drivers/base/bus.o
+cc1: all warnings being treated as errors
+make[3]: *** [../scripts/Makefile.build:338: drivers/bluetooth/bluetooth-power.o] Error 1
+make[2]: *** [../scripts/Makefile.build:642: drivers/bluetooth] Error 2
+make[2]: ** Esperando que outros processos terminem.
+  CC      drivers/base/dd.o
+  CC      crypto/ansi_cprng.o
+  CC      block/mq-deadline.o
+  CC      drivers/base/syscore.o
+  CC      crypto/drbg.o
+  CC      block/kyber-iosched.o
+  CC      block/bfq-iosched.o
+  CC      drivers/base/driver.o
+  CC      block/bfq-wf2q.o
+  CC      drivers/base/class.o
+  CC      crypto/jitterentropy.o
+  CC      crypto/jitterentropy-kcapi.o
+  CC      crypto/ghash-generic.o
+  CC      drivers/base/platform.o
+  CC      block/bfq-cgroup.o
+  CC      drivers/base/cpu.o
+  CC      crypto/zstd.o
+  CC      block/compat_ioctl.o
+  CC      crypto/ecc.o
+  CC      block/blk-mq-pci.o
+  CC      drivers/base/firmware.o
+  CC      drivers/base/init.o
+  CC      crypto/ecdh.o
+  CC      drivers/base/map.o
+  CC      drivers/base/devres.o
+  CC      block/blk-zoned.o
+  CC      crypto/ecdh_helper.o
+  CC      crypto/hash_info.o
+  CC      block/keyslot-manager.o
+  CC      crypto/simd.o
+  CC      drivers/base/attribute_container.o
+  CC      block/bio-crypt-ctx.o
+  CC      drivers/base/transport_class.o
+  CC      drivers/base/topology.o
+  CC      crypto/rsapubkey.asn1.o
+  CC      crypto/rsaprivkey.asn1.o
+  AR      crypto/built-in.a
+  CC      drivers/base/container.o
+  CC      drivers/base/property.o
+  CC      block/blk-crypto.o
+  CC      drivers/base/cacheinfo.o
+  CC      drivers/base/devcon.o
+  CC      block/blk-crypto-fallback.o
+  CC      drivers/base/module.o
+  CC      drivers/base/soc.o
+  CC      drivers/base/pinctrl.o
+  CC      drivers/base/platform-msi.o
+  CC      drivers/base/arch_topology.o
+  AR      block/built-in.a
+  AR      drivers/base/built-in.a
+make[1]: *** [/home/SonGoku/evert-forward-port/kernel/Makefile:1225: drivers] Error 2
+make: *** [Makefile:153: sub-make] Error 2

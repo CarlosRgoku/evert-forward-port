@@ -1,0 +1,19 @@
+# Notices
+
+This repository contains a mix of components:
+
+- **Kernel patches, DTBs and scripts** (`tools/patch_evert_rpm.py`,
+  `tools/mini-init.c`, `tools/dtb_dump.py`, `dts-patch/`, `boot/dtb*.img`):
+  GPL-2.0, except where the original file says otherwise.
+- **`tools/mkbootimg/`**: AOSP `mkbootimg`, Apache-2.0. The local changes are
+  documented in `mkbootimg-phase0.patch`.
+- **Kernel image in the release assets**: Linux kernel 4.19, GPL-2.0 with
+  the Linux syscall note. The kernel source is
+  `LineageOS/android_kernel_qcom_sdm660`.
+- **LineageOS 22.2 ramdisk / boot images**: the ramdisk comes from the
+  LineageOS build for `evert`. It may contain components under their own
+  licenses, including proprietary vendor files. Check before redistributing.
+- **`boot/boot.img`**: a repack of the stock Motorola 4.4 kernel and the
+  LineageOS 22.2 ramdisk. It is **not** a factory backup.
+
+The full GPL-2.0 text is in `LICENSE`.

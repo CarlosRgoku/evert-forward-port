@@ -1,0 +1,18 @@
+# Build trees and toolchains (not versioned)
+/kernel/
+/toolchains/
+/tmp/
+/work/
+
+# Boot images are release assets; only the stock DTBs stay in git
+/boot/obsolete/
+/boot/stock-reference/
+/boot/*.img
+!/boot/dtb*.img
+
+# Release asset (kept in the release, not in git)
+/phase0-test.tar
+
+# Python
+__pycache__/
+*.pyc

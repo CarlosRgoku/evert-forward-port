@@ -1,0 +1,122 @@
+dts-patch/evert0-4.19.dtb: Warning (status_is_string): /soc/i2c@c1b6000/nq@28:status: property is not a string
+dts-patch/evert0-4.19.dtb: Warning (status_is_string): /soc/spi@c178000:status: property is not a string
+dts-patch/evert0-4.19.dtb: Warning (status_is_string): /soc/spi@c178000/fc8350@0:status: property is not a string
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/pinctrl@03000000/muc_spi_ctrl@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/pinctrl@03000000/muc_attach@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/pinctrl@03000000/muc_det@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/pinctrl@03000000/apba_default@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,cpu-bwmon: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,clk-cpu-630@179c0000/qcom,limits-dcvs@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,clk-cpu-630@179c0000/qcom,limits-dcvs@1: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,mss@4080000/qcom,mba-mem@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,spmi@800f000/qcom,pm660l@3/analog-codec@f000/msm-dig-codec: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/ad-hoc-bus: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/cpr4-ctrl@05061000/thread@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/cprh-ctrl@179c8000/thread@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/cprh-ctrl@179c4000/thread@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,msm-cpe-lsm@3: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/msm_cdc_pinctrl@75: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/msm_cdc_pinctrl@64: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,kgsl-iommu: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,mdss_rotator: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/ramoops: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,camera-flash@0: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/qcom,camera-flash@1: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /soc/gpio-regulator@50: node has a unit name, but no reg property
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /memory: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /reserved-memory/ramoops_mem_region: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /reserved-memory/tzlog_bck_region: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_vs_reg): /reserved-memory/wdog_cpuctx_region: node has a reg or ranges property, but no unit name
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/pinctrl@03000000: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/spi@c1b7000/cs47l35@0/adsps/adsp@0ffe00: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/qcom,sps-dma@0xc144000: unit name should not have leading "0x"
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/qcom,sps-dma@0xc184000: unit name should not have leading "0x"
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/serial@0c170000: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/serial@0c1b0000: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/syscon@05065120: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/regulator@01fcf004: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/ldo@0506e000: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/cpr4-ctrl@05061000: unit name should not have leading 0s
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/memory@0x200000: unit name should not have leading "0x"
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /soc/rpm-memory@0x778000: unit name should not have leading "0x"
+dts-patch/evert0-4.19.dtb: Warning (unit_address_format): /reserved-memory/dfps_data_mem@0x9f7ff000: unit name should not have leading "0x"
+dts-patch/evert0-4.19.dtb: Warning (avoid_unnecessary_addr_size): /soc/qcom,spmi@800f000/qcom,pm660l@3/qpnp-lcdb@ec00: unnecessary #address-cells/#size-cells without "ranges" or child "reg" property
+dts-patch/evert0-4.19.dtb: Warning (avoid_unnecessary_addr_size): /soc/qcom,kgsl-3d0@5000000/qcom,gpu-pwrlevel-bins: unnecessary #address-cells/#size-cells without "ranges" or child "reg" property
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c175000: duplicate unit-address (also used in node /soc/spi@c175000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c176000: duplicate unit-address (also used in node /soc/spi@c176000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c177000: duplicate unit-address (also used in node /soc/spi@c177000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c178000: duplicate unit-address (also used in node /soc/spi@c178000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c1b5000: duplicate unit-address (also used in node /soc/spi@c1b5000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c1b6000: duplicate unit-address (also used in node /soc/spi@c1b6000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c1b7000: duplicate unit-address (also used in node /soc/spi@c1b7000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/i2c@c1b8000: duplicate unit-address (also used in node /soc/spi@c1b8000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,smp2p-modem@17911008: duplicate unit-address (also used in node /soc/qcom,smp2p-adsp@17911008)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/clock-controller@5065000: duplicate unit-address (also used in node /soc/gfx@5065000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,smem@86000000: duplicate unit-address (also used in node /soc/qcom,glink-smem-native-xprt-modem@86000000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,smem@86000000: duplicate unit-address (also used in node /soc/qcom,glink-smem-native-xprt-adsp@86000000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,glink-smem-native-xprt-modem@86000000: duplicate unit-address (also used in node /soc/qcom,glink-smem-native-xprt-adsp@86000000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7840000: duplicate unit-address (also used in node /soc/jtagmm@7840000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7940000: duplicate unit-address (also used in node /soc/jtagmm@7940000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7a40000: duplicate unit-address (also used in node /soc/jtagmm@7a40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7b40000: duplicate unit-address (also used in node /soc/jtagmm@7b40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7c40000: duplicate unit-address (also used in node /soc/jtagmm@7c40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7d40000: duplicate unit-address (also used in node /soc/jtagmm@7d40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7e40000: duplicate unit-address (also used in node /soc/jtagmm@7e40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/etm@7f40000: duplicate unit-address (also used in node /soc/jtagmm@7f40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcedev@1de0000: duplicate unit-address (also used in node /soc/qcrypto@1de0000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,rpm-stats@200000: duplicate unit-address (also used in node /soc/qcom,rpm-rail-stats@200000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,rpm-stats@200000: duplicate unit-address (also used in node /soc/qcom,rpm-log@200000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,rpm-rail-stats@200000: duplicate unit-address (also used in node /soc/qcom,rpm-log@200000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,mdss_dsi@0: duplicate unit-address (also used in node /soc/qcom,camera-flash@0)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,glink-smem-native-xprt-rpm@778000: duplicate unit-address (also used in node /soc/rpm-msg-ram@778000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,ipc-spinlock@1f40000: duplicate unit-address (also used in node /soc/syscon@1f40000)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,actuator@0: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,eeprom@0)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,actuator@0: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,camera@0)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,eeprom@0: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,camera@0)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,eeprom@1: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,camera@1)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,eeprom@2: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,camera@2)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,cci@ca0c000/qcom,eeprom@3: duplicate unit-address (also used in node /soc/qcom,cci@ca0c000/qcom,camera@3)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,lpm-levels/qcom,pm-cluster@0/qcom,pm-cluster-level@0: duplicate unit-address (also used in node /soc/qcom,lpm-levels/qcom,pm-cluster@0/qcom,pm-cluster@0)
+dts-patch/evert0-4.19.dtb: Warning (unique_unit_address): /soc/qcom,lpm-levels/qcom,pm-cluster@0/qcom,pm-cluster-level@1: duplicate unit-address (also used in node /soc/qcom,lpm-levels/qcom,pm-cluster@0/qcom,pm-cluster@1)
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/sound: Missing property '#gpio-cells' in node /soc/msm_cdc_pinctrl@75 or bad phandle (referred from qcom,us-euro-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/sound: Missing property '#gpio-cells' in node /soc/cdc_pdm_pinctrl or bad phandle (referred from qcom,cdc-pdm-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/sound: Missing property '#gpio-cells' in node /soc/cdc_comp_pinctrl or bad phandle (referred from qcom,cdc-comp-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/sound: Missing property '#gpio-cells' in node /soc/cdc_dmic_pinctrl or bad phandle (referred from qcom,cdc-dmic-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/lpi_pinctrl@15070000: Missing property '#gpio-cells' in node /soc/pinctrl@03000000/i2c_1/i2c_1_bitbang or bad phandle (referred from qcom,num-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (gpios_property): /soc/msm-sdw-codec@152c1000: Missing property '#gpio-cells' in node /soc/sdw_clk_data_pinctrl or bad phandle (referred from qcom,cdc-sdw-gpios[0])
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/replicator@6046000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tmc@6047000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6045000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6045000/ports/port@2: graph node unit address error, expected "1"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6041000/ports/port@2: graph node unit address error, expected "6"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6041000/ports/port@3: graph node unit address error, expected "7"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6041000/ports/port@4: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6042000/ports/port@1: graph node unit address error, expected "2"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6042000/ports/port@2: graph node unit address error, expected "5"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6042000/ports/port@3: graph node unit address error, expected "6"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b70000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b70000/ports/port@2: graph node unit address error, expected "1"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@2: graph node unit address error, expected "1"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@3: graph node unit address error, expected "2"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@4: graph node unit address error, expected "3"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@5: graph node unit address error, expected "4"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@6: graph node unit address error, expected "5"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@7: graph node unit address error, expected "6"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@7b60000/ports/port@8: graph node unit address error, expected "7"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6005000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@6005000/ports/port@2: graph node unit address error, expected "3"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@3: graph node unit address error, expected "4"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@4: graph node unit address error, expected "5"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@5: graph node unit address error, expected "6"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@6: graph node unit address error, expected "8"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@7: graph node unit address error, expected "a"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@6004000/ports/port@8: graph node unit address error, expected "b"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@7191000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@7bc2000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@7043000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/tpda@7b92000/ports/port@1: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@71c3000/ports/port@2: graph node unit address error, expected "0"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@71c3000/ports/port@4: graph node unit address error, expected "1"
+dts-patch/evert0-4.19.dtb: Warning (graph_port): /soc/funnel@71c3000/ports/port@5: graph node unit address error, expected "2"

@@ -1,0 +1,169 @@
+--- a/tools/mkbootimg/mkbootimg.py
++++ b/tools/mkbootimg/mkbootimg.py
+@@ -18,6 +18,7 @@
+ 
+ from argparse import (ArgumentParser, ArgumentTypeError,
+                       FileType, RawDescriptionHelpFormatter)
++from contextlib import contextmanager
+ from hashlib import sha1
+ from os import fstat
+ from struct import pack
+@@ -26,9 +27,9 @@
+ import collections
+ import os
+ import re
++import shutil
++import sys
+ import tempfile
+-
+-from gki.generate_gki_certificate import generate_gki_certificate
+ 
+ # Constant and structure definition is in
+ # system/tools/mkbootimg/include/bootimg/bootimg.h
+@@ -542,9 +543,9 @@
+     parser.add_argument('--header_version', type=parse_int, default=0,
+                         help='boot image header version')
+     parser.add_argument('--dt', help='path to the device tree image', type=FileType('rb'))
+-    parser.add_argument('-o', '--output', type=FileType('wb'),
++    parser.add_argument('-o', '--output',
+                         help='output file name')
+-    parser.add_argument('--vendor_boot', type=FileType('wb'),
++    parser.add_argument('--vendor_boot',
+                         help='vendor boot output file name')
+     parser.add_argument('--vendor_ramdisk', type=FileType('rb'),
+                         help='path to the vendor ramdisk')
+@@ -592,6 +593,9 @@
+     vbmeta partition) via the Android Verified Boot process, when the
+     device boots.
+     """
++    # GKI signing support is not needed for unsigned/legacy boot images.
++    from gki.generate_gki_certificate import generate_gki_certificate
++
+     # Flush the buffer for signature calculation.
+     args.output.flush()
+ 
+@@ -645,27 +649,109 @@
+         write_padded_file(args.vendor_boot, args.dtb, args.pagesize)
+ 
+ 
+-def main():
+-    args = parse_cmdline()
++def validate_outputs(args):
++    """Reject aliases before opening an output or replacing any input."""
++    if args.header_version not in {0, 1, 2, 3, 4}:
++        raise ValueError(
++            f'Boot header version {args.header_version} not supported')
++    if args.dtb is not None and args.header_version < 2:
++        raise ValueError('--dtb requires header version 2 or later; '
++                         'for evert v0 use the kernel with appended DTBs')
++    if args.second is not None and args.output is not None and args.header_version > 2:
++        raise ValueError('--second not compatible with given header version')
++    if args.output is not None and args.header_version == 2 and filesize(args.dtb) == 0:
++        raise ValueError('DTB image must not be empty.')
+     if args.vendor_boot is not None:
+         if args.header_version not in {3, 4}:
+             raise ValueError(
+                 '--vendor_boot not compatible with given header version')
+         if args.header_version == 3 and args.vendor_ramdisk is None:
+             raise ValueError('--vendor_ramdisk missing or invalid')
+-        write_vendor_boot_header(args)
+-        write_vendor_boot_data(args)
+-    if args.output is not None:
+-        if args.second is not None and args.header_version > 2:
+-            raise ValueError(
+-                '--second not compatible with given header version')
+-        img_id = write_header(args)
+-        if args.header_version > 2:
+-            write_data(args, BOOT_IMAGE_HEADER_V3_PAGESIZE)
+-        else:
+-            write_data(args, args.pagesize)
+-        if args.id and img_id is not None:
+-            print('0x' + ''.join(f'{octet:02x}' for octet in img_id))
++
++    def same_path(left, right):
++        if left == '-' or right == '-':
++            return left == right
++        if os.path.realpath(left) == os.path.realpath(right):
++            return True
++        try:
++            return os.path.samefile(left, right)
++        except FileNotFoundError:
++            return False
++
++    outputs = [path for path in (args.output, args.vendor_boot)
++               if path is not None]
++    inputs = [file.name for file in
++              (args.kernel, args.ramdisk, args.second, args.dt, args.dtb,
++               args.recovery_dtbo, args.vendor_ramdisk, args.vendor_bootconfig)
++              if file is not None]
++    if args.gki_signing_key:
++        inputs.append(args.gki_signing_key)
++    builder = getattr(args, 'vendor_ramdisk_table_builder', None)
++    if builder is not None:
++        inputs.extend(entry.ramdisk_path for entry in builder.entries)
++    if len(outputs) == 2 and same_path(*outputs):
++        raise ValueError('boot and vendor_boot outputs must be different files')
++    for output in outputs:
++        if any(same_path(output, source) for source in inputs):
++            raise ValueError(f'output must not overwrite an input: {output}')
++
++
++@contextmanager
++def staged_outputs(args):
++    """Build completely before committing each output with os.replace."""
++    staged = []
++    paths = {field: getattr(args, field) for field in ('output', 'vendor_boot')}
++    try:
++        for field, path in paths.items():
++            if path is None:
++                continue
++            directory = (os.path.dirname(os.path.abspath(path))
++                         if path != '-' else None)
++            stream = tempfile.NamedTemporaryFile(
++                mode='w+b', prefix='.mkbootimg-', dir=directory, delete=False)
++            staged.append((path, stream))
++            setattr(args, field, stream)
++        yield
++        for _, stream in staged:
++            stream.flush()
++            os.fsync(stream.fileno())
++            stream.close()
++        for path, stream in staged:
++            if path == '-':
++                with open(stream.name, 'rb') as image:
++                    shutil.copyfileobj(image, sys.stdout.buffer)
++                sys.stdout.buffer.flush()
++                os.unlink(stream.name)
++            else:
++                os.replace(stream.name, path)
++    finally:
++        for _, stream in staged:
++            stream.close()
++            if os.path.exists(stream.name):
++                os.unlink(stream.name)
++        for field, path in paths.items():
++            setattr(args, field, path)
++
++
++def main():
++    args = parse_cmdline()
++    validate_outputs(args)
++    img_id = None
++    with staged_outputs(args):
++        if args.vendor_boot is not None:
++            write_vendor_boot_header(args)
++            write_vendor_boot_data(args)
++        if args.output is not None:
++            img_id = write_header(args)
++            if args.header_version > 2:
++                write_data(args, BOOT_IMAGE_HEADER_V3_PAGESIZE)
++            else:
++                write_data(args, args.pagesize)
++    if args.id and img_id is not None:
++        destination = (sys.stderr if '-' in (args.output, args.vendor_boot)
++                       else sys.stdout)
++        print('0x' + ''.join(f'{octet:02x}' for octet in img_id),
++              file=destination)
+ 
+ 
+ if __name__ == '__main__':

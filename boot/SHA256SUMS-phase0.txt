@@ -1,0 +1,3 @@
+68aa4e2cfeedaac2715ebec9241f95a93703b9e6f5b905ed715008065344582b  boot-4.19-evert-test-mini.img
+b17637872b39c567277a34dd2b66cce3953b0cd998927003307f15a57f1ae025  boot-4.19-evert-test-patched-dtb.img
+eed15098ddb7612161a930baf0fc0a23e591beab2ddffb7a71d028f7f65794c8  kernel-4.19-evert-patched.gz
